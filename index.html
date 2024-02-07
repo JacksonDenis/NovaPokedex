@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="./css/plugins.css" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <title>Projeto</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+
+        <header>
+            <div class="container">
+                <a href="/" class="logo">
+                    <img src="img/logo.svg" alt="logo">
+                </a>
+                <p>Case Study  ->  Code<strong>Boost</strong></p>
+            </div>
+        </header>
+
+        <section class="s-area-slide-hero">
+            <div class="slide-hero">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="main-area">
+                            <div class="container">
+                                <div class="text">
+                                    <div class="tag">
+                                        <div class="icon">
+                                            <img src="img/bag-red.svg" alt="bag-red" />
+                                        </div>
+                                        <span>pokedex</span>
+                                    </div>
+                                    <h1>Who is that Pokémon?</h1>
+                                    <p>The perfect guide for those who want to hunt Pokémons around the world</p>
+                                    <div class="image">
+                                        <img src="img/lighting.svg" class="lights" alt="">
+                                        <img src="img/pokeball-red.png" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="area-explorer">
+                                    <div class="txt">
+                                        <div class="icon">
+                                            <img src="img/arrow-down-white.svg" alt="">
+                                        </div>
+                                        <span>explore</span>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide blue">
+                        <div class="main-area">
+                            <div class="container">
+                                <div class="text">
+                                    <div class="tag blue">
+                                        <div class="icon">
+                                            <img src="img/bag-red.svg" alt="bag-red" />
+                                        </div>
+                                        <span>pokedex</span>
+                                    </div>
+                                    <h1>Catch them all!</h1>
+                                    <p>The perfect guide for those who want to hunt Pokémons around the world</p>
+                                    <div class="image">
+                                        <img src="img/lighting.svg" class="lights" alt="">
+                                        <img src="img/pokeball-blue.png" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="area-explorer">
+                                    <div class="txt">
+                                        <div class="icon">
+                                            <img src="img/arrow-down-white.svg" alt="">
+                                        </div>
+                                        <span>explore</span>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="s-all-info-pokemons">
+            <div class="container">
+                <div class="top">
+                    <h2>Select your Pokémon</h2>
+                    <div class="search">
+                        <input type="text" placeholder="Search name or code" class="input-search"/>
+                        <button type="button" class="btn-search">
+                            <img src="img/icon-search.svg" alt="search" />
+                        </button>
+                    </div>
+                </div>
+                <div class="area-all">
+                    <div class="left">
+                        <ul class="typeArea">
+                            <li>
+                                <button class="type-filter all active" code-type="">
+                                    <div class="icon">
+                                        <img src="img/icon-all.svg" alt="ghost" />
+                                    </div>
+                                    <span>All</span>
+                                </button>
+                            </li>                        
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div class="top-list">
+                            <div>
+                                <img src="img/icon-pokeball.svg" alt="">
+                            </div>
+                            <span><strong class="quantidade-pokemons">150</strong> Pokemons</span>
+                        </div>
+                        <div class="select-custom">
+                            <button class="item-selected">
+                                <span>Show: </span>
+                                <strong>All</strong>
+                            </button>
+                            <ul class="dorpdown-select">
+                                <li>
+                                    <button class="type-filter active " code-type="">
+                                        <div class="icon">
+                                            <img src="img/icon-all.svg" alt="ghost" />
+                                        </div>
+                                        <span>All</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list">
+                            
+                        </div>
+                        <button class="btn-load-more">Load more Pokémons</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="text">
+                    <h3>Módulo JavaScript</h3>
+                    <p>Consumindo e exibindo dados de uma API</p>
+                </div>
+                <a href="/" target="_blank">
+                    <img src="img/codeboost.svg" alt="codeboost" />
+                </a>
+            </div>
+        </footer>
+        
+
+        <div class="modal" type-pokemon-modal="">
+            <div class="overlay"></div>
+            <div class="box" type-pokemon-modal="">
+                <button class="close">
+                    <img src="img/close.svg" alt="close" />
+                </button>
+                <div class="left">
+                    <div class="icon">
+                        <img src="" alt="" class="icon-modal"/>
+                    </div>
+                    <div class="image">
+                        <img src="" alt="" class="image-modal" />
+                    </div>
+                </div>
+                <div class="rigth">
+                    <div class="name">
+                        <h2 class="name-modal"></h2>
+                        <span class="code-modal"></span>
+                    </div>
+                    <ul class="type">
+                        
+                    </ul>
+                    <ul class="info">
+                        <li>
+                            <span>Height</span>
+                            <strong class="height-pok">0.7m</strong>
+                        </li>
+                        <li>
+                            <span>Weight</span>
+                            <strong class="weight-pok">6.9kg</strong>
+                        </li>
+                        <li>
+                            <span>Abilities</span>
+                            <strong class="abilities-pok">Overgrow</strong>
+                        </li>
+                    </ul>
+                    <div class="weak">
+                        <h4>Weaknesses</h4>
+                        <ul class="area-weak">
+                        </ul>
+                    </div>
+                    <div class="stats">
+                        <h5>Stats</h5>
+                        <div class="all">
+                            <div class="item">
+                                <span>HP</span>
+                                <div class="bar-status">
+                                    <div class="bar hp"></div>
+                                    <ul class="separator">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span>Attack</span>
+                                <div class="bar-status">
+                                    <div class="bar attack"></div>
+                                    <ul class="separator">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span>Defense</span>
+                                <div class="bar-status">
+                                    <div class="bar defense"></div>
+                                    <ul class="separator">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span>Sp. attack</span>
+                                <div class="bar-status">
+                                    <div class="bar sp-attack"></div>
+                                    <ul class="separator">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span>Sp. defense</span>
+                                <div class="bar-status">
+                                    <div class="bar sp-defense"></div>
+                                    <ul class="separator">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span>Speed</span>
+                                <div class="bar-status">
+                                    <div class="bar speed"></div>
+                                    <ul class="separator">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/all.js"></script>
+    </body>
+</html>

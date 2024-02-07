@@ -1,0 +1,413 @@
+.s-area-slide-hero {
+    position: relative;
+    width: 100%;
+    height: 99.4rem;
+
+    .slide-hero {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .swiper-slide {
+            &.blue {
+                .main-area {
+                    background: url(../img/bg-blue.svg) no-repeat center center;
+                    background-size: cover;
+                    .text {
+                        .image {
+                            img {
+                                &:last-child {
+                                    position: relative;
+                                    top: -6.5rem;
+                                    left: 1.3rem;
+                                }
+                            }
+                        }
+                    }
+                    .area-explorer {
+                        .txt {
+                            .icon {
+                                background-color: rgba(63, 104, 186, 0.15);
+                            }
+                        }
+                    }
+                }
+            }
+            &::after {
+                content: "";
+                width: 100%;
+                height: 28.8rem;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: #eff3f6;
+                z-index: 0;
+                pointer-events: none;
+            }
+            .main-area {
+                background: url("../img/bg-red.svg") no-repeat center center;
+                width: 100%;
+                height: 70.6rem;
+                background-size: cover;
+                padding-top: 13.3rem;
+                position: relative;
+                .container {
+                    position: relative;
+                    height: 100%;
+                }
+                .tag {
+                    margin: 0 auto;
+                }
+                .text {
+                    h1 {
+                        text-align: center;
+                        margin-bottom: 0.8rem;
+                        margin-top: 2.9rem;
+                    }
+                    p {
+                        text-align: center;
+                        color: #fff;
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        line-height: 150%;
+                    }
+                    .image {
+                        position: relative;
+                        z-index: 1;
+                        width: 100%;
+                        max-width: 79.8rem;
+                        margin: 0 auto;
+                        margin-top: 12.2rem;
+                        .lights {
+                            position: absolute;
+                            left: 50%;
+                            top: -4.5rem;
+                            margin-left: -8.5rem;
+                        }
+                    }
+                }
+                .area-explorer {
+                    position: absolute;
+                    bottom: 8rem;
+                    left: 0;
+                    width: 100%;
+                    z-index: 10;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    .txt {
+                        position: relative;
+                        top: -3.9rem;
+                        left: -2.4rem;
+                        display: flex;
+                        align-items: center;
+                        transform: rotate(270deg);
+                        .icon {
+                            width: 4rem;
+                            height: 4rem;
+                            background-color: #c90c0c;
+                            border-radius: 50%;
+                            @include centerTotalFlex;
+                            transform: rotate(90deg);
+                        }
+                        span {
+                            color: #fff;
+                            font-size: 1.3rem;
+                            font-weight: 500;
+                            line-height: 150%;
+                            margin-left: 3rem;
+                        }
+                    }
+                    .swiper-pagination {
+                        position: relative;
+                        .swiper-pagination-bullet {
+                            width: 0.7rem;
+                            height: 0.7rem;
+                            background: #fff;
+                            &:not(:first-child) {
+                                margin-left: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.s-all-info-pokemons {
+    position: relative;
+    padding-top: 11.9rem;
+    margin-top: -28.8rem;
+    z-index: 2;
+    .top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 16.8rem;
+        h2 {
+            max-width: 26.5rem;
+        }
+        .search {
+            margin-top: 2.2rem;
+        }
+    }
+    .area-all {
+        display: flex;
+        .left {
+            width: 100%;
+            max-width: 32.9rem;
+            border-right: 1px solid #eff3f6;
+            padding-top: 7.1rem;
+            padding-bottom: 7.5rem;
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+            }
+        }
+        .right {
+            width: 100%;
+            padding-top: 7.1rem;
+            padding-left: 7.5rem;
+            padding-bottom: 7.5rem;
+            .top-list {
+                display: flex;
+                align-items: center;
+                margin-bottom: 6.3rem;
+                span {
+                    color: #4d5053;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    line-height: 150%;
+                }
+                img {
+                    margin-right: 0.6rem;
+                }
+            }
+            .select-custom {
+                display: none;
+            }
+            .list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 3.2rem;
+                padding-bottom: 6.8rem;
+            }
+            .btn-load-more {
+                margin: 0 auto;
+                display: table;
+            }
+        }
+    }
+}
+
+//responsivo
+.s-area-slide-hero {
+    @media (max-width: 910px) {
+        height: 95.4rem;
+        .slide-hero {
+            .swiper-slide {
+                &.blue {
+                    .main-area {
+                        .text {
+                            h1 {
+                                max-width: 38.5rem;
+                                margin: 0 auto;
+                                margin-top: 2.9rem;
+                                margin-bottom: 0.8rem;
+                            }
+                        }
+                    }
+                }
+                &:after {
+                    height: 25rem;
+                }
+                .main-area {
+                    .area-explorer {
+                        display: none;
+                    }
+                    .text {
+                        .image {
+                            margin-top: 7.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 560px) {
+        overflow: hidden;
+        height: 104.5rem;
+        .slide-hero {
+            .swiper-slide {
+                &.blue {
+                    .main-area {
+                        .text {
+                            h1 {
+                                max-width: 25.4rem;
+                            }
+                        }
+                    }
+                }
+                .main-area {
+                    padding-top: 12rem;
+                    h1 {
+                        font-size: 4.8rem;
+                        line-height: 5.9rem;
+                    }
+                    .image {
+                        @include centerTotalFlex;
+                        img {
+                            max-width: 72rem;
+                        }
+                    }
+                }
+                &::after {
+                    height: 34rem;
+                }
+            }
+        }
+    }
+}
+
+.s-all-info-pokemons {
+    @media (max-width: 1200px) {
+        .top {
+            .search {
+                max-width: 32.3rem;
+            }
+        }
+        .area-all {
+            .left {
+                padding-top: 4rem;
+                max-width: 15.9rem;
+            }
+            .right {
+                padding-top: 4rem;
+                padding-left: 2.5rem;
+                padding-bottom: 4rem;
+                .top-list {
+                    margin-bottom: 4rem;
+                }
+                .list {
+                    grid-gap: 2rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 910px) {
+        margin-top: -22.8rem;
+        .top {
+            margin-bottom: -4rem;
+        }
+        .area-all {
+            .left {
+                display: none;
+            }
+            .right {
+                padding-left: 0;
+            }
+        }
+    }
+    @media (max-width: 660px) {
+        margin-top: -36.5rem;
+        padding-top: 12rem;
+        .top {
+            display: block;
+            margin-bottom: 9.7rem;
+            h2 {
+                text-align: center;
+                margin: 0 auto;
+                max-width: 100%;
+                margin-bottom: 2rem;
+            }
+            .search {
+                margin: 0 auto;
+            }
+        }
+        .area-all {
+            .right {
+                .list {
+                    grid-template-columns: 1fr;
+                    gap: 1.6rem;
+                    margin: 0 auto;
+                    max-width: 85%;
+                }
+                .select-custom {
+                    display: block;
+                    position: relative;
+                    margin-bottom: 5.5rem;
+                    &.active {
+                        .item-selected {
+                            border-radius: 1rem 1rem 0 0;
+                        }
+                        .dorpdown-select {
+                            opacity: 1;
+                            pointer-events: all;
+                        }
+                    }
+                    .item-selected {
+                        cursor: pointer;
+                        width: 100%;
+                        height: 5.6rem;
+                        border: 1px solid #a0afba;
+                        background: url("../img/arrow-down-select.svg") no-repeat right 2.4rem center;
+                        padding: 0 2rem;
+                        border-radius: 2rem;
+                        display: flex;
+                        align-items: center;
+                        span {
+                            color: #7a7d80;
+                            opacity: 0.6;
+                            font-size: 1.4rem;
+                            margin-right: 0.4rem;
+                        }
+                        strong {
+                            color: #7a7d80;
+                            opacity: 0.6;
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                        }
+                    }
+                    .dorpdown-select {
+                        position: absolute;
+                        top: 5.6rem;
+                        z-index: 2;
+                        width: 100%;
+                        height: 22.3rem;
+                        border: 1px solid #a0afba;
+                        background-color: #fff;
+                        padding: 2.1rem;
+                        border-top: 0;
+                        overflow-y: auto;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: all 0.3s;
+                        &::-webkit-scrollbar-track {
+                            background-color: transparent;
+                        }
+                        &::-webkit-scrollbar {
+                            width: 5px;
+                            background-color: transparent;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background-color: #3d75c2;
+                            border-radius: 5px;
+                        }
+                        li {
+                            &:first-child {
+                                button {
+                                    padding-top: 0;
+                                }
+                            }
+                            button {
+                                padding: 1.2rem 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

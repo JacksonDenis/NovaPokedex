@@ -1,0 +1,420 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include centerTotalFlex;
+    z-index: 2022;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .box {
+        position: relative;
+        width: 100%;
+        max-width: 71rem;
+        height: 50.8rem;
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: 0px 10px 40px 0px rgba(13, 12, 71, 0.05);
+        z-index: 1;
+        display: flex;
+        transform: translateY(4rem);
+        transition: all 0.3s ease;
+        &[type-pokemon-modal="grass"] {
+            .left {
+                background: url("../img/bg-types/grass.svg") no-repeat center center;
+                background-size: cover;
+            }
+        }
+        &[type-pokemon-modal="bug"] {
+            .left {
+                background: url("../img/bg-types/bug.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="dark"] 
+            {
+            .left {
+                background: url("../img/bg-types/dark.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="dragon"] 
+    
+        {
+            .left {
+                background: url("../img/bg-types/dragon.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="electric"] 
+        &
+        {
+            .left {
+                background: url("../img/bg-types/electric.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="fairy"] 
+        {
+            .left {
+                background: url("../img/bg-types/fairy.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="fighting"] 
+        {
+            .left {
+                background: url("../img/bg-types/fighting.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="ground"] 
+    
+        {
+            .left {
+                background: url("../img/bg-types/ground.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="ice"]  {
+            .left {
+                background: url("../img/bg-types/ice.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="normal"] 
+    
+        {
+            .left {
+                background: url("../img/bg-types/normal.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="poison"] 
+    
+        {
+            .left {
+                background: url("../img/bg-types/poison.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="psychic"] 
+        
+        {
+            .left {
+                background: url("../img/bg-types/psychic.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="rock"] 
+            {
+            .left {
+                background: url("../img/bg-types/rock.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="ghost"] 
+
+        {
+            .left {
+                background: url("../img/bg-types/ghost.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="steel"] 
+
+        {
+            .left {
+                background: url("../img/bg-types/steel.svg") no-repeat center center;
+                background-size: cover;;
+            }
+        }
+        &[type-pokemon-modal="water"] 
+
+        {
+            .left {
+                background: url("../img/bg-types/water.svg");
+            }
+        }
+        &[type-pokemon-modal="fire"] 
+            {
+            .left {
+                background: url("../img/bg-types/fire.svg");
+            }
+        }
+        &[type-pokemon-modal="flying"] 
+    
+        {
+            .left {
+                background: url("../img/bg-types/flying.svg");
+            }
+        }
+        .close {
+            position: absolute;
+            right: 0;
+            top: -4.4rem;
+            width: 3.6rem;
+            height: 3.6rem;
+            border-radius: 0.8rem;
+            background: #fff;
+            @include centerTotalFlex;
+            transition: all 0.3s;
+            &:hover {
+                background-color: transparent;
+                transform: scale(1.2);
+            }
+        }
+        .left {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 19.1rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            .icon {
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+                width: 3.4rem;
+                height: 3.4rem;
+                background-color: white;
+                border-radius: 50%;
+                @include centerTotalFlex;
+            }
+            .image {
+                width: 20.2rem;
+                position: absolute;
+                left: 1.4rem;
+                bottom: 13.1rem;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .rigth {
+            padding: 3.5rem 7.2rem 2.9rem 7.4rem;
+            width: 100%;
+            .name {
+                display: flex;
+                align-items: baseline;
+                font-family: "Montserrat", sans-serif;
+                margin-bottom: 1rem;
+                h2 {
+                    color: #2f3133;
+                    font-size: 2.8rem;
+                    font-weight: 700;
+                    letter-spacing: -0.028rem;
+                    margin-right: 0.8rem;
+                }
+                span {
+                    color: #7a7d80;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    letter-spacing: -0.016rem;
+                }
+            }
+
+            .type {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                flex-wrap: wrap;
+                margin-bottom: 2.0rem;
+                gap: 1rem;
+            }
+
+            .info {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 2rem;
+                gap: 4.8rem;
+                li {
+                    span {
+                        display: block;
+                        color: #7a7d80;
+                        font-size: 1.3rem;
+                        font-weight: 400;
+                        letter-spacing: -0.013rem;
+                        margin-bottom: 0.4rem;
+                    }
+                    strong {
+                        color: #2f3133;
+                        font-family: "Montserrat" sans-serif;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        letter-spacing: -0.014rem;
+                    }
+                }
+            }
+
+            .weak {
+                margin-bottom: 2rem;
+                h4 {
+                    color: #4d5053;
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    letter-spacing: -0.013rem;
+                    margin-bottom: 1.6rem;
+                }
+                ul {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    width: 100%;
+                    flex-wrap: wrap;
+                }
+            }
+
+            .stats {
+                h5 {
+                    color: #4d5053;
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    letter-spacing: -0.013rem;
+                    margin-bottom: 1.6rem;
+                }
+                .all {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.3rem;
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        span {
+                            display: block;
+                            color: #7a7d80;
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            width: 100%;
+                            max-width: 6.8rem;
+                        }
+                        .bar-status {
+                            position: relative;
+                            width: 100%;
+                            max-width: 28.3rem;
+                            height: 0.3rem;
+                            background-color: #eff3f6;
+                            .bar {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 56%;
+                                height: 100%;
+                                background-color: red;
+                                z-index: 0;
+                            }
+                            .separator {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                gap: 5.4rem;
+                                li {
+                                    width: 4px;
+                                    height: 3px;
+                                    background-color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.open-modal {
+    .modal {
+        opacity: 1;
+        pointer-events: all;
+        .box {
+            transform: translateY(0);
+        }
+    }
+}
+
+//responsivo
+
+.modal {
+    @media (max-width: 600px) {
+        align-items: flex-end;
+        .box {
+            flex-direction: column;
+            width: 100%;
+            height: 90%;
+            .close {
+                top: -5rem;
+                border-radius: 8px 8px 0 0;
+                width: 5rem;
+                height: 5rem;
+                img {
+                    width: 2.5rem;
+                }
+            }
+            .left {
+                max-width: 100%;
+                height: 12.5rem;
+                background-size: cover;
+                .image {
+                    left: 50%;
+                    bottom:  -2.5rem;
+                    width: 12rem;
+                    margin-left: -6rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .rigth {
+                padding: 4rem 2.4rem;
+                .name {
+                    justify-content: center;
+                }
+                .type {
+                    justify-content: center;
+                }
+                .info {
+                    justify-content: center;
+                }
+                .weak {
+                    h4 {
+                        text-align: center;
+                    }
+                    ul {
+                        justify-content: center;
+                        gap: 10px;
+                    }
+                }
+                .stats {
+                    .all {
+                        .item {
+                            .bar-status {
+                                max-width: 75%;
+                                .separator {
+                                    gap: 20%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
